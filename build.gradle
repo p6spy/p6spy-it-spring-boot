@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' version '1.4.2.RELEASE'
+    id 'java'
+}
+
+jar {
+    baseName = 'p6spy-spring-boot'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "p6spy:p6spy:3.0.0"
+    runtime 'com.h2database:h2:1.4.193'
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+}
